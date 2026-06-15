@@ -1,0 +1,17 @@
+{
+  "name": "com.cemuka.runtime-node-editor",
+  "version": "1.0.0",
+  "displayName": "Runtime Node Editor",
+  "description": "Unity runtime node editor using with Unity UI",
+  "unity": "6000.4",
+  "documentationUrl": "https://github.com/cemuka/UnityRuntimeNodeEditor",
+  "licensesUrl": "https://github.com/cemuka/UnityRuntimeNodeEditor/blob/master/LICENSE.md",
+  "dependencies": {
+ },
+  "author": {
+    "name": "Cemuka",
+    "email": "cemugurkaracam@gmail.com",
+    "url": "https://github.com/cemuka"
+  }
+}
+

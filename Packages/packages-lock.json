@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.cemuka.runtime-node-editor": {
+      "version": "file:com.cemuka.runtime-node-editor",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.2d.common": {
       "version": "13.0.2",
       "depth": 1,
