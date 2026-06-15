@@ -20,7 +20,11 @@ Unity version 2021.3.3f1
 RGB color display example
 
 ![node editor](./img/color.png)
-
+## Installing
+In the Package Manager, [install a package from git URL](https://docs.unity3d.com/2023.1/Documentation/Manual/upm-ui-giturl.html) using this URL:
+```
+https://github.com/cemuka/UnityRuntimeNodeEditor.git?path=/Packages/com.cemuka.runtime-node-editor
+```
 ## Example
 Simply extend the `NodeEditor`.
 
@@ -73,7 +77,7 @@ Graph actions are event based.
 
 
 
-You'll find a complete example in the Example folder. Let's walkthrough over.
+You'll find 2 complete examples in the package Samples. Let's walkthrough over.
 
 Listen events from editor
 ```c#
