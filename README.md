@@ -21,7 +21,7 @@ RGB color display example
 
 ![node editor](./img/color.png)
 ## Installing
-In the Package Manager, [install a package from git URL](https://docs.unity3d.com/2023.1/Documentation/Manual/upm-ui-giturl.html) using this URL:
+In the Package Manager, [install a package from git URL](https://docs.unity3d.com/Documentation/Manual/upm-ui-giturl.html) using this URL:
 ```
 https://github.com/cemuka/UnityRuntimeNodeEditor.git?path=/Packages/com.cemuka.runtime-node-editor
 ```
