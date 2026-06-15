@@ -7,10 +7,4 @@ namespace RuntimeNodeEditor
         Add,
         Subtract
     }
-
-    public enum ConnectionType
-    {
-        Single,
-        Multiple
-    }
 }
