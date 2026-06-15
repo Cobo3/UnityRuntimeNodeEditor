@@ -12,6 +12,16 @@
     "name": "Cemuka",
     "email": "cemugurkaracam@gmail.com",
     "url": "https://github.com/cemuka"
-  }
+  },
+  "samples": [
+	{
+	  "displayName": "Color Editor",
+	  "path": "Samples~/ColorEditor"
+	},
+	{
+	  "displayName": "Simple Math Editor",
+	  "path": "Samples~/SimpleMathEditor"
+	}
+  ]
 }
 

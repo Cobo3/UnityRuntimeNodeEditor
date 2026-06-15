@@ -1,5 +1,5 @@
 {
-    "name": "Cemuka.RuntimeNodeEditor.Samples",
+    "name": "Cemuka.RuntimeNodeEditor.Samples.SimpleMathEditor",
     "rootNamespace": "",
     "references": [
         "GUID:8f5c68f774363a54c99fc0044d54659f",
