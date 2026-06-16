@@ -99,6 +99,9 @@ namespace RuntimeNodeEditor
 
         public void Connect(SocketInput input, SocketOutput output)
         {
+            if (!input.OwnerNode.CanConnect(output, input))
+                return;
+
             var connection = new Connection(NewId(), input, output);
 
             input.Connect(connection);

@@ -58,6 +58,8 @@ namespace RuntimeNodeEditor
             input.SetOwner(this, _socketEvents);
             Inputs.Add(input);
         }
+        
+        public virtual bool CanConnect(SocketOutput output, SocketInput input) => true;
 
         public void Connect(SocketInput input, SocketOutput output)
         {
