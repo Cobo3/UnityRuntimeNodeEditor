@@ -59,26 +59,26 @@ namespace RuntimeNodeEditor
         {
             //  Create a parent
             var parent = new GameObject("NodeGraph");
-            parent.transform.SetParent(holder);
+            parent.transform.SetParent(holder, worldPositionStays: false);
             parent.AddComponent<RectTransform>().Stretch();
             parent.AddComponent<Image>();
             parent.AddComponent<Mask>();
             
             //      - add background child, stretch
             var bg = new GameObject("Background");
-            bg.transform.SetParent(parent.transform);
+            bg.transform.SetParent(parent.transform, worldPositionStays: false);
             var bgRect = bg.AddComponent<RectTransform>().Stretch();
             bg.AddComponent<Image>().color = bgColor;
 
             //      - add pointer listener child, stretch
             var pointerListener = new GameObject("PointerListener");
-            pointerListener.transform.SetParent(parent.transform);
+            pointerListener.transform.SetParent(parent.transform, worldPositionStays: false);
             pointerListener.AddComponent<RectTransform>().Stretch();
             pointerListener.AddComponent<Image>().color = Color.clear;
 
             //      - add graph child, center, with size
             var graph = new GameObject("Graph");
-            graph.transform.SetParent(parent.transform);
+            graph.transform.SetParent(parent.transform, worldPositionStays: false);
             var graphRect = graph.AddComponent<RectTransform>();
             graphRect.sizeDelta = Vector2.one * 1000f;
             graphRect.anchoredPosition = Vector2.zero; 
@@ -86,17 +86,17 @@ namespace RuntimeNodeEditor
 
             //          - add line container child, stretch
             var lineContainer = new GameObject("LineContainer");
-            lineContainer.transform.SetParent(graph.transform);
+            lineContainer.transform.SetParent(graph.transform, worldPositionStays: false);
             var lineContainerRect = lineContainer.AddComponent<RectTransform>().Stretch();
             
             //          - add node container
             var nodeContainer = new GameObject("NodeContainer");
-            nodeContainer.transform.SetParent(graph.transform);
+            nodeContainer.transform.SetParent(graph.transform, worldPositionStays: false);
             var nodeContainerRect = nodeContainer.AddComponent<RectTransform>().Stretch();
 
             //              - add pointer locator 
             var pointerLocator = new GameObject("PointerLocator");
-            pointerLocator.transform.SetParent(nodeContainer.transform);
+            pointerLocator.transform.SetParent(nodeContainer.transform, worldPositionStays: false);
             var pLocatorRect = pointerLocator.AddComponent<RectTransform>();
             pLocatorRect.sizeDelta = Vector2.zero;
             pLocatorRect.anchoredPosition = Vector2.zero;
@@ -104,7 +104,7 @@ namespace RuntimeNodeEditor
             
             //      - add ctx menu child, stretch
             var ctxMenuContainer = new GameObject("CtxMenuContainer");
-            ctxMenuContainer.transform.SetParent(parent.transform);
+            ctxMenuContainer.transform.SetParent(parent.transform, worldPositionStays: false);
             var ctxContainerRect = ctxMenuContainer.AddComponent<RectTransform>().Stretch();
 
             var bezierDrawer = graph.AddComponent<BezierCurveDrawer>();
