@@ -120,7 +120,7 @@ namespace RuntimeNodeEditor
             input.OwnerNode.Disconnect(input, output);
 
             input.Disconnect(conn);
-            output.Disconnect();
+            output.Disconnect(conn);
 
             connections.Remove(conn);
             _signalSystem.InvokeSocketDisconnection(input, output);
@@ -292,7 +292,7 @@ namespace RuntimeNodeEditor
             // check if output connected to this target input already 
             if (_currentDraggingSocket.HasConnection() && target.HasConnection())
             {
-                if (target.Connections.Contains(_currentDraggingSocket.connection) )
+                if (target.Connections.Intersect(_currentDraggingSocket.Connections).Any() )
                 {
                     //  then do nothing
                     _currentDraggingSocket = null;
@@ -334,7 +334,7 @@ namespace RuntimeNodeEditor
                 //  if single, disconnect
                 if (_currentDraggingSocket.connectionType == ConnectionType.Single)
                 {
-                    Disconnect(_currentDraggingSocket.connection);
+                    Disconnect(_currentDraggingSocket.Connections[0]);
                 }
             }
         }

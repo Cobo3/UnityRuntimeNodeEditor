@@ -25,7 +25,7 @@ namespace RuntimeNodeEditor.Examples
 
         private void OnConnect(SocketInput arg1, SocketOutput arg2)
         {
-            Graph.drawer.SetConnectionColor(arg2.connection.connId, Color.green);
+            Graph.drawer.SetConnectionColor(arg2.Connections[^1].connId, Color.green);
         }
 
         private void OnGraphPointerClick(PointerEventData eventData)
